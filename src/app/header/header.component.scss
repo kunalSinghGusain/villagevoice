@@ -1,0 +1,107 @@
+/* :: 4.0 Header Area CSS */
+.header-area {
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  top: 20px;
+  left: 0;
+  z-index: 1000;
+  
+}
+.navbar-brand{
+  color: #fff;
+}
+.header-area .navbar-light .navbar-nav .nav-link{
+  color: #fff;
+}
+.header-area .navbar-light .navbar-nav .nav-link:hover,.header-area .navbar-light .navbar-nav .nav-link:focus{
+  color: #ff2d55;
+}
+.navbar-light .navbar-toggler{
+  border:1px solid #fff;
+  background-color: #ccc;
+  color: rgba(0,0,0,1);
+}
+@media only screen and (max-width:991px){
+  .navbar .collapse.navbar-collapse.show{
+    background-color: rgba(0,0,0,0.5);
+    padding: 20px;
+  }
+  .navbar .collapse.navbar-collapse.show ul li:hover{
+    background-color: #ff2d55;
+    padding: 0px 10px;
+  }
+}
+
+
+// nabar effect
+.navbar-collapse.circle ul li a {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  list-style: none;
+}
+.navbar-collapse.circle ul li a:after {
+  display: block;
+  position: absolute;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '.';
+  color: transparent;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+}
+.navbar-collapse.circle ul li a:hover:after {
+  -webkit-animation: circle 1.5s ease-in forwards;
+}
+/* Keyframes */
+@-webkit-keyframes circle {
+  0% {
+    width: 1px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    height: 1px;
+    z-index: -1;
+    background: #eee;
+    border-radius: 100%;
+  }
+  100% {
+    background: #aaa;
+    height: 5000%;
+    width: 5000%;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 0;
+  }
+}
+
+
+
+.header-fixed{
+	position: fixed;
+  animation: slide-down 0.5s;
+  background-color: #000;
+  top:0;
+  width: 100%;
+}
+@keyframes slide-down {
+	0% {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+	100% {
+		opacity: 0.9;
+		transform: translateY(0);
+	}
+}
