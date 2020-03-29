@@ -1,14 +1,4 @@
-html *{
-    -webkit-font-smoothing: antialiased;
-}
 
-.h6, h6 {
-    font-size: .75rem !important;
-    font-weight: 500;
-    font-family: Roboto,Helvetica,Arial,sans-serif;
-    line-height: 1.5em;
-    text-transform: uppercase;
-}
 
 .name h6 {
     margin-top: 10px;
@@ -113,9 +103,6 @@ a .material-icons {
     content: "";
 }
 
-.header-filter::before {
-    background: rgba(0,0,0,.5);
-}
 
 .main-raised {
     margin: -60px 30px 0;
@@ -180,6 +167,7 @@ p {
 
 .profile-page .profile-tabs {
     margin-top: 4.284rem;
+    margin-bottom: 30px;
 }
 
 .nav-pills, .nav-tabs {
@@ -213,6 +201,8 @@ p {
     border-radius: 30px;
     padding: 10px 15px;
     text-align: center;
+    border:1px solid #9c27b0;
+    box-shadow: 0 5px 20px 0 rgba(0,0,0,.2), 0 13px 24px -11px rgba(156,39,176,.6);
 }
 
 .nav-pills .nav-item .nav-link:not(.active):hover {

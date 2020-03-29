@@ -169,6 +169,7 @@ img {
   padding-bottom: 100px;
 }
 
+
 .section-padding-100-0 {
   padding-top: 100px;
   padding-bottom: 0;
@@ -527,6 +528,13 @@ img {
 @media only screen and (max-width: 767px) {
   .single-hero-slide .hero-slides-content h6 {
     letter-spacing: 5px;
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 567px) {
+  .single-hero-slide .hero-slides-content h6 {
+    letter-spacing: 5px;
+    font-size: 13px;
   }
 }
 
@@ -559,16 +567,23 @@ img {
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .single-hero-slide .hero-slides-content h2 {
     letter-spacing: 15px;
-    font-size: 42px;
+    font-size: 30px;
   }
 }
 
 @media only screen and (max-width: 767px) {
   .single-hero-slide .hero-slides-content h2 {
     letter-spacing: 5px;
-    font-size: 30px;
+    font-size: 25px;
   }
 }
+@media only screen and (max-width: 567px) {
+  .single-hero-slide .hero-slides-content h2 {
+    letter-spacing: 5px;
+    font-size:15px;
+  }
+}
+
 
 .single-hero-slide .hero-slides-content .btn {
   border: 1px solid #fff;
@@ -2147,3 +2162,23 @@ img {
 /* ====== The End ====== */
 
 /*# sourceMappingURL=style.css.map */
+
+
+
+/* media */
+@media only screen and (max-width: 767px) {
+  .section-padding-100 {
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }
+}
+@media only screen and (max-width: 567px) {
+  .section-padding-100 {
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+  .circles li:nth-child(1){
+    width:20px;
+    height:20px;
+  }
+}
