@@ -33,12 +33,12 @@ var fs = require('fs');
 // var {db, models} = require('./server/db');
 var path = require('path');
 // http://expressjs.com/en/starter/static-files.html
-app.use(express.static('dist/musicsite-test2'));
+app.use(express.static('dist'));
 
 //app.use('/api', APIRouter);
 
 app.get("*", function(req, res) {
-    res.sendFile(path.join(__dirname+'/dist/musicsite-test2/index.html'));
+    res.sendFile(path.join(__dirname+'/dist/index.html'));
 });
 
 // listen for requests :)
