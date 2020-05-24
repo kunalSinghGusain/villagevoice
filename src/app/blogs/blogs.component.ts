@@ -1,4 +1,5 @@
 import { Component, OnInit ,HostListener} from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-blogs',
@@ -7,14 +8,58 @@ import { Component, OnInit ,HostListener} from '@angular/core';
 })
 export class BlogsComponent implements OnInit {
 
-  constructor() { }
+//loader
+showLoader =false;
 
-  ngOnInit() {
-  }
- /*scroll to top*/
- showScroll: boolean;
- showScrollHeight = 300;
- hideScrollHeight = 10;
+imageRecords;
+blogPostRecords;
+
+//Posts
+getPostsPath='/api/getPosts';
+postPostsPath='/api/insertPost';
+PostsEditPath='/api/editPost';
+PostsDeletePath='/api/deletePost';
+
+//images
+getImagesPath='/api/getAllImages';
+postImagesPath='/api/uploadImage';
+ImagesDeletePath='/api/deleteImage';
+
+/*scroll to top*/
+showScroll: boolean;
+showScrollHeight = 300;
+hideScrollHeight = 10;
+
+
+constructor(private http : HttpClient) {
+  this.showLoader =true;
+ }
+
+ ngOnInit(): void {
+  debugger;
+  //throw new Error("Method not implemented.");
+  this.loadPosts(this.getPostsPath);
+  
+  this.loadImages(this.getImagesPath);
+}
+
+loadPosts(apiPath: string){
+  let obs = this.http.get(apiPath);
+  obs.subscribe((res)=>{
+    debugger;
+    this.blogPostRecords = <any[]>res;
+    this.showLoader =false;
+  }); 
+}
+
+loadImages(apiPath: string){
+  let obs = this.http.get(apiPath);
+  obs.subscribe((res)=>{
+    debugger;
+    this.imageRecords = <any[]>res;
+    this.showLoader =false;
+  }); 
+}
  
  @HostListener('window:scroll', [])
      onWindowScroll() 

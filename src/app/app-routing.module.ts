@@ -6,6 +6,7 @@ import { BlogsComponent } from './blogs/blogs.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { GallerystoreComponent } from './gallerystore/gallerystore.component';
 import { ProfileComponent } from './profile/profile.component';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component'
 
 
 const routes: Routes = [
@@ -32,6 +33,11 @@ const routes: Routes = [
   {
     path:'gallery',
     component: GallerystoreComponent,
+  
+  },
+  {
+    path:'admin',
+    component: AdminPanelComponent,
   
   },
   {

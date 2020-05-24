@@ -1,5 +1,6 @@
 import { Component, OnInit,HostListener } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-homepage',
@@ -28,9 +29,10 @@ export class HomepageComponent implements OnInit {
     autoplay : true,
     autoWidth: true
   }
-  constructor() { }
+  constructor(private http : HttpClient) { }
 
   ngOnInit() {
+    
   }
   /*scroll to top*/
 showScroll: boolean;

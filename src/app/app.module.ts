@@ -15,7 +15,7 @@ import { EventsComponent } from './events/events.component';
 import { ProfileComponent } from './profile/profile.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
-
+import {HttpClientModule} from '@angular/common/http';
 
 
 
@@ -37,7 +37,8 @@ import { AdminPanelComponent } from './admin-panel/admin-panel.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     CarouselModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
     
     
   
